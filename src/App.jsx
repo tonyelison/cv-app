@@ -5,33 +5,41 @@ import EditForm from './components/EditForm.jsx'
 import ViewForm from './components/ViewForm.jsx'
 
 function App() {
-
-  // const mockData = [
-  //   {
-  //     id: 'personal',
-  //     label: 'Personal Details',
-  //     items: ['First Name', 'Email Address', 'Phone Number']
-  //   },
-  //   {
-  //     id: 'schools',
-  //     label: 'Education',
-  //     items: ['School', 'Degree', 'Start Date', 'End Date']
-  //   },
-  //   {
-  //     id: 'jobs',
-  //     label: 'Employment History',
-  //     items: ['Employer', 'Job Title', 'Start Date', 'End Date']
-  //   },
-  // ];
-
+  
   const applicant = {
     personal: {
       'full-name': 'John Smith',
       email: 'example@email.com',
       phone: '000-000-0000',
     },
-    education: [],
-    'employment-history': [],
+    education: [
+      {
+        school: 'University of Utah',
+        degree: 'Bachelor of Science',
+        'start-date': '08-01-2005',
+        'end-date': '09-01-2023',
+      },
+      {
+        employer: 'Utah Valley University',
+        title: 'Masters in Science',
+        'start-date': '07-01-2005',
+        'end-date': '10-01-2023',
+      },
+    ],
+    'employment-history': [
+      {
+        employer: 'University of Utah',
+        title: 'Administrator',
+        'start-date': '08-01-2005',
+        'end-date': '09-01-2023',
+      },
+      {
+        employer: 'Utah Valley University',
+        title: 'Administrator',
+        'start-date': '07-01-2005',
+        'end-date': '10-01-2023',
+      },
+    ],
   };
 
   const [statefulApplicant, setApplicant] = useState(applicant);
