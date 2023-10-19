@@ -1,7 +1,7 @@
-function ViewForm() {
+function ViewForm({ applicant }) {
   return (
     <div>
-      View Form
+      {applicant.personal['full-name']}
     </div>
   );
 }
