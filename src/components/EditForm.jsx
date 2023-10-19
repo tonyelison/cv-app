@@ -1,8 +1,12 @@
-function EditForm() {
+import FormSection from './FormSection.jsx'
+
+function EditForm(props) {
   return (
-    <div>
-      Edit Form
-    </div>
+    <form>
+      {props.form.map(({ id, label, items }) => {
+        return <FormSection key={id} label={label} items={items} />
+      })}
+    </form>
   );
 }
 
